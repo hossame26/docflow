@@ -95,9 +95,9 @@ function Nav() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-4 left-4 right-4 z-50 mx-auto max-w-6xl"
+      className="fixed top-4 left-3 right-3 md:left-4 md:right-4 z-50 mx-auto max-w-6xl"
     >
-      <div className="glass-nav rounded-2xl px-6 py-3 shadow-lg">
+      <div className="glass-nav rounded-2xl px-4 md:px-6 py-3 shadow-lg">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2.5">
@@ -194,12 +194,12 @@ function Nav() {
    ═══════════════════════════════════════════════ */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-primary-light/30 to-white pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-primary-light/30 to-white pt-28 pb-12 md:pt-40 md:pb-28">
       {/* Background decorative elements */}
       <div className="pointer-events-none absolute inset-0">
         {/* Full grid lines */}
         <div
-          className="absolute inset-0 opacity-[0.07]"
+          className="absolute inset-0 opacity-[0.03] md:opacity-[0.07]"
           style={{
             backgroundImage:
               "linear-gradient(to right, #F28C38 1px, transparent 1px), linear-gradient(to bottom, #F28C38 1px, transparent 1px)",
@@ -219,47 +219,47 @@ function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,white_75%)]" />
         {/* Floating document shapes */}
         <motion.div
-          className="absolute top-20 right-[15%] h-16 w-12 rounded-lg border border-primary/10 bg-white/60 shadow-sm rotate-12"
+          className="hidden md:block absolute top-20 right-[15%] h-16 w-12 rounded-lg border border-primary/10 bg-white/60 shadow-sm rotate-12"
           animate={{ y: [0, -20, 0], rotate: [12, 18, 12] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-40 left-[10%] h-12 w-10 rounded-lg border border-primary/10 bg-white/60 shadow-sm -rotate-6"
+          className="hidden md:block absolute top-40 left-[10%] h-12 w-10 rounded-lg border border-primary/10 bg-white/60 shadow-sm -rotate-6"
           animate={{ y: [0, 15, 0], rotate: [-6, -12, -6] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         <motion.div
-          className="absolute bottom-32 left-[20%] h-14 w-11 rounded-lg border border-primary/10 bg-white/60 shadow-sm rotate-6"
+          className="hidden md:block absolute bottom-32 left-[20%] h-14 w-11 rounded-lg border border-primary/10 bg-white/60 shadow-sm rotate-6"
           animate={{ y: [0, -12, 0], rotate: [6, 10, 6] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
         <motion.div
-          className="absolute bottom-20 right-[25%] h-10 w-8 rounded-md border border-primary/10 bg-white/60 shadow-sm -rotate-12"
+          className="hidden md:block absolute bottom-20 right-[25%] h-10 w-8 rounded-md border border-primary/10 bg-white/60 shadow-sm -rotate-12"
           animate={{ y: [0, 10, 0], rotate: [-12, -8, -12] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
         {/* Gradient orbs */}
-        <div className="absolute top-0 left-1/4 h-[600px] w-[600px] rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-primary/3 blur-3xl" />
+        <div className="absolute top-0 left-1/4 h-[300px] w-[300px] md:h-[600px] md:w-[600px] rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-[200px] w-[200px] md:h-[400px] md:w-[400px] rounded-full bg-primary/3 blur-3xl" />
         {/* Accent dots */}
-        <div className="absolute top-32 right-[40%] h-2 w-2 rounded-full bg-primary/20" />
-        <div className="absolute top-60 left-[30%] h-3 w-3 rounded-full bg-primary/15" />
-        <div className="absolute bottom-40 right-[35%] h-2 w-2 rounded-full bg-primary/25" />
+        <div className="hidden md:block absolute top-32 right-[40%] h-2 w-2 rounded-full bg-primary/20" />
+        <div className="hidden md:block absolute top-60 left-[30%] h-3 w-3 rounded-full bg-primary/15" />
+        <div className="hidden md:block absolute bottom-40 right-[35%] h-2 w-2 rounded-full bg-primary/25" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-8">
+      <div className="relative mx-auto max-w-6xl px-4 md:px-6">
+        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-8 lg:gap-12">
           {/* Left — Text */}
           <div>
             <FadeIn delay={0.1}>
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-primary-light px-4 py-2 text-sm font-medium text-text">
+              <div className="mb-6 md:mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-primary-light px-3 md:px-4 py-2 text-xs md:text-sm font-medium text-text">
                 <Zap className="h-4 w-4 text-primary" />
                 R&eacute;forme facturation &eacute;lectronique 2026
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-text md:text-5xl lg:text-6xl md:leading-tight">
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-text md:text-5xl lg:text-6xl md:leading-tight">
                 Fini les relances.{" "}
                 <span className="text-primary">Vos clients envoient,</span>{" "}
                 vous traitez.
@@ -274,17 +274,17 @@ function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <div className="mt-10 flex flex-row items-center gap-4">
+              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
                 <a
                   href="#pilote"
-                  className="cursor-pointer inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30 whitespace-nowrap"
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30 whitespace-nowrap"
                 >
                   Essayer gratuitement 3 mois
                   <ArrowRight className="h-4 w-4" />
                 </a>
                 <a
                   href="#comment-ca-marche"
-                  className="cursor-pointer inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3.5 text-sm font-semibold text-text transition-colors hover:bg-gray-50 whitespace-nowrap"
+                  className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-xl border border-border px-6 py-3.5 text-sm font-semibold text-text transition-colors hover:bg-gray-50 whitespace-nowrap"
                 >
                   <Play className="h-4 w-4" />
                   Voir comment &ccedil;a marche
@@ -293,7 +293,7 @@ function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.5}>
-              <div className="mt-10 flex flex-wrap gap-6 text-sm text-text-muted">
+              <div className="mt-8 md:mt-10 flex flex-wrap gap-4 md:gap-6 text-sm text-text-muted">
                 <span className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-green" />
                   Sans engagement
@@ -313,14 +313,14 @@ function Hero() {
           {/* Right — 3D Robot */}
           <FadeIn delay={0.3} direction="right">
             <div className="relative flex items-center justify-center">
-              <div className="relative h-[400px] w-full md:h-[500px] lg:h-[550px] flex items-center justify-center">
+              <div className="relative h-[300px] w-full md:h-[500px] lg:h-[550px] flex items-center justify-center">
                 {/* Glow background */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="h-72 w-72 rounded-full bg-primary/10 blur-3xl animate-pulse" />
                 </div>
                 {/* 3D animated robot placeholder */}
                 <motion.div
-                  className="relative z-10"
+                  className="relative z-10 scale-75 md:scale-100"
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 >
@@ -427,7 +427,7 @@ function Problem() {
   ];
 
   return (
-    <section className="bg-soft-bg py-20 md:py-28">
+    <section className="bg-soft-bg py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -438,7 +438,7 @@ function Problem() {
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 md:mt-14 grid gap-4 md:gap-6 md:grid-cols-3">
           {cards.map((card, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <motion.div
@@ -491,7 +491,7 @@ function Solution() {
   ];
 
   return (
-    <section id="comment-ca-marche" className="bg-white py-20 md:py-28">
+    <section id="comment-ca-marche" className="bg-white py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -502,7 +502,7 @@ function Solution() {
           </div>
         </FadeIn>
 
-        <div className="mt-16 grid items-start gap-12 lg:grid-cols-2">
+        <div className="mt-10 md:mt-16 grid items-start gap-10 md:gap-12 lg:grid-cols-2">
           {/* Steps */}
           <div className="space-y-8">
             {steps.map((step, i) => (
@@ -592,7 +592,7 @@ function Features() {
   ];
 
   return (
-    <section id="fonctionnalites" className="bg-soft-bg py-20 md:py-28">
+    <section id="fonctionnalites" className="bg-soft-bg py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -603,7 +603,7 @@ function Features() {
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 md:mt-14 grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <FadeIn key={i} delay={i * 0.08}>
               <motion.div
@@ -645,7 +645,7 @@ function Comparatif() {
   ];
 
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -657,7 +657,7 @@ function Comparatif() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <div className="mt-14 overflow-x-auto">
+          <div className="mt-10 md:mt-14 overflow-x-auto rounded-xl -mx-2 px-2">
             <table className="w-full min-w-[640px] text-left">
               <thead>
                 <tr>
@@ -774,7 +774,7 @@ function Pricing() {
   ];
 
   return (
-    <section id="tarifs" className="bg-soft-bg py-20 md:py-28">
+    <section id="tarifs" className="bg-soft-bg py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <div className="text-center">
@@ -785,7 +785,7 @@ function Pricing() {
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 md:mt-14 grid gap-5 md:gap-6 lg:grid-cols-3">
           {plans.map((plan, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <motion.div
@@ -871,7 +871,7 @@ function Pilot() {
   ];
 
   return (
-    <section id="pilote" className="bg-navy py-20 md:py-28">
+    <section id="pilote" className="bg-navy py-12 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <FadeIn>
           <h2 className="text-center text-3xl font-bold text-white md:text-4xl">
@@ -879,7 +879,7 @@ function Pilot() {
           </h2>
         </FadeIn>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+        <div className="mt-10 md:mt-14 grid gap-6 md:gap-8 lg:grid-cols-2">
           {/* Perks */}
           <div className="space-y-5">
             {perks.map((p, i) => (
